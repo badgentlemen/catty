@@ -1,0 +1,133 @@
+.product {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 480px;
+    cursor: pointer;
+    border: 4px solid #1698d9;
+    overflow: hidden;
+    background: url('../../static/catty.png') #f2f2f2;
+    background-size: 120%;
+    background-position: -28px 200px;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+}
+
+.product.product-default:hover {
+    border-color: #2ea8e6;
+}
+
+.product.product-default:hover .product-buble {
+    background-color: #2ea8e6;
+}
+
+.product.product__is-disabled {
+    cursor: no-drop;
+}
+
+.product-inner {
+    position: relative;
+    width: 100%;
+    margin: 18px 10px;
+}
+
+.product-buble {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: white;
+    background-color: #1698d9;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+}
+
+.product-buble__title {
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.product-buble__subtitle {
+    font-size: 21px;
+}
+
+.product-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 35px;
+    max-height: 175px;
+    overflow: hidden;
+}
+
+.product-header__text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666666;
+}
+
+.product-header__title {
+    font-size: 48px;
+}
+
+.product-header__subtitle {
+    font-size: 24px;
+}
+
+.product-header__title,
+.product-header__subtitle {
+    font-weight: bold;
+    color: black;
+    margin: 0;
+}
+
+.product-header__infowrapper {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #666666;
+}
+
+.product-header__infowrapper-item {
+    margin: 0 0 4px;
+}
+
+
+/* STATES */
+.product__is-selected .product-buble {
+    background-color: #d91667;
+}
+
+.product__is-selected {
+    border-color: #d91667;
+}
+
+
+/* .product__is-selected:hover {
+
+} */
+
+.product__is-disabled .product-buble {
+    background-color: #b3b3b3;
+}
+
+/*
+
+.card__is-disabled .card-header__title,
+.card__is-disabled .card-header__subtitle {
+    color: rgba(0, 0, 0, .5);
+}
+
+.card__is-disabled::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(242, 242, 242, 0.4);
+} */
